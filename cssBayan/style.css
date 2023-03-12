@@ -3,17 +3,10 @@ body {
     justify-content: center;
 }
 
-
-.meme_image {
-    position: relative;
-    width: 0vmax;
-    height: 0vmin;
-    transition: all 0.7s ease;
-}
-
 hr {
     margin: 0;
     border: 1px solid rgb(201, 193, 193);
+    cursor: pointer;
 }
 
 span {
@@ -31,11 +24,20 @@ span {
     background-repeat: no-repeat;
     background-size: 3vmax 3vmin;
     display: none;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
+}
+
+.meme_image {
+    position: relative;
+    width: 0vmax;
+    height: 0vmin;
+    transition: all 0.7s ease;
+    cursor: pointer;
 }
 
 .meme_label {
     display: block;
+    cursor: pointer;
 }
 
 
@@ -88,6 +90,14 @@ input[type = "radio"]:checked ~ .icons {
     background-image: url("https://cdn-icons-png.flaticon.com/512/15/15287.png");
 }
 
+input[type = "radio"]:checked ~ .meme_head {
+    color: black;
+}
+
+.meme:active input[type = "radio"] ~ .meme_head {
+    color: rgb(202, 208, 15);
+}
+
 @media (hover :hover)
 {
     .meme:hover .image .meme_image{
@@ -102,6 +112,10 @@ input[type = "radio"]:checked ~ .icons {
 
     .bayan:hover .icons{
         display: flex;
+    }
+
+    .bayan:hover .meme_head{
+        color: black;
     }
 
     .meme:hover{
