@@ -9,10 +9,11 @@ hr {
     cursor: pointer;
 }
 
-span {
-    font-size: 2.5vmax;
+.header {
+    font-size:x-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 .icons {
     width: 3vmax;
@@ -48,11 +49,6 @@ span {
     min-height: calc(100% + 10vmin);
 }
 
-.header {
-    font-size:xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 .meme{
     position: relative;
     width: 100%;
@@ -70,6 +66,8 @@ span {
 
 .meme_head {
     color: rgb(202, 208, 15);
+    font-size: 2.5vmax;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .meme_label input[type="radio"]{
@@ -110,7 +108,7 @@ input[type = "radio"]:checked ~ .meme_head {
         background-image: url("https://cdn-icons-png.flaticon.com/512/15/15287.png");
     }
 
-    .bayan:hover .icons{
+    .bayan:hover .icons, .meme_head{
         display: flex;
     }
 
@@ -122,3 +120,21 @@ input[type = "radio"]:checked ~ .meme_head {
         height: fit-content;
     }
 }
+
+@media (max-width:320px) and (max-height: 568px) {
+    .header {
+        font-size: 2vmax;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+}
+
+@media (min-width: 820px) and (min-height:1180px)
+{
+    .header {
+        font-size:4vmin;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+}
+
